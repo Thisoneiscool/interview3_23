@@ -1,0 +1,31 @@
+<h2>Contact us</h2>
+
+<div *ngIf="!formSubmitted">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+
+    <input type="text" value="name" formControlName="name" />
+
+    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      The name is required
+    </div>
+
+    <label for="message">Message:</label>
+
+    <input type="text" value="message" formControlName="message" />
+
+    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+      The message is required
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="formSubmitted">
+  <p>Thank you for contacting us. We will be in touch shortly</p>
+  <p>Name:{{formName.value}}</p>
+  <p>Message:{{formMessage.value}}</p>
+</div>

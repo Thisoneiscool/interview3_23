@@ -1,0 +1,13 @@
+<div>
+  <ul class="user-list">
+    <li *ngFor="let user of users" class="user-item">
+      <div class="user">
+        <img [src]="user.avatar" alt="users_Avatar" class="user-avatar" />
+        <div class="user-name">{{ user.first_name }} {{ user.last_name }}</div>
+        <div class="user-email">
+          <a href="'malito:'+user.email">{{ user.email }}</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
