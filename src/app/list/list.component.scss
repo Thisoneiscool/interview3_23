@@ -6,34 +6,35 @@
 
 .user-item {
   margin-bottom: 20px;
-  background-color: lightgray;
 }
 
 .user {
   display: flex;
   align-items: center;
   gap: 10px;
-}
 
-.user-avatar {
-  // width: 100px;
-  // height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+  .user-avatar {
+    // width: 50px;
+    // height: 50px;
+    border-radius: 50%;
+  }
 
-.user-name {
-  font-weight: bold;
-}
+  .user-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
 
-.user-email {
-  font-size: 14px;
-}
+  .user-email {
+    font-size: 14px;
 
-.user-email a {
-  text-decoration: none;
-  
-  &:hover {
-    text-decoration: underline;
+    a {
+      // color: #666;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #333;
+      }
+    }
   }
 }

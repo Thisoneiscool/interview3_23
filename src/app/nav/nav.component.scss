@@ -28,3 +28,52 @@
 //     }
 //   }
 // }
+
+header {
+  background-color: #fff;
+  height: 80px;
+  border-bottom: 1px solid #eee;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 20px;
+
+          a {
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
